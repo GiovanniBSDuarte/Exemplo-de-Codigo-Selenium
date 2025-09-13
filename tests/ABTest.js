@@ -15,7 +15,7 @@ const { Builder, By, until } = require('selenium-webdriver');
         await driver.wait(until.titleIs('The Internet'), 5000);
 
         // Capturar o título visível da página
-        let pageTitle = await driver.findElement(By.tagName('h3')).getText();
+        let pageTitle = await driver.findElement(By.css('h3')).getText();
 
         // Validar se contém "A/B Test"
         if (pageTitle.includes('A/B Test')) {
